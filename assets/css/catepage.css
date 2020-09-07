@@ -260,6 +260,8 @@ transform: rotate(-45deg);
 .card-title{
   font-weight: bold;
 }
+
+
 .card-text{
   /* width:100%; */
   padding:0 1em;
@@ -347,6 +349,11 @@ main{
 }
 
 @media screen and (max-width: 767px) {
+
+  html{
+    font-size: 13px;
+  }
+
   .active a{
     padding-bottom:1px;
 
@@ -393,4 +400,8 @@ main{
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
+}
+
+#modalDescription{
+  font-size: 11px;
 }
