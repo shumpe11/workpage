@@ -1,0 +1,396 @@
+@charset "UTF-8";
+
+html{
+  /* height:100% */
+  font-size: 16px;
+}
+
+body{
+  font-family:Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+}
+
+.card-title{
+  border-left: 5px solid #03a9f4
+}
+
+.text-muted{
+  color:#0288d1 !important
+}
+
+header{
+  /* border-bottom: 1px solid #000; */
+  /* background-color: #5f7d8c; */
+  background-color: #03a9f4;
+  color:#e1e1e1;
+  /* color:#fff; */
+  /* height:64px; */
+  /* box-shadow: 0 .55rem 1.05rem rgba(0,0,0,.15)!important; */
+}
+
+
+footer{
+  /* width: 90%; */
+}
+
+body::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(193, 194, 193);
+    border: 3px solid transparent;
+    /* border-radius: 9px; */
+    background-clip: content-box;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(241, 241, 241);
+    width: 15px;
+}
+
+h1{
+  /* font-size: 18px; */
+}
+
+
+/* #pagetop{
+    position:fixed;
+    bottom:5px;
+    right:5px;
+}
+#pagetop p a{
+    display:block;
+    padding:15px;
+    background:#fff;
+    border:2px solid #131313;
+    color:#131313;
+    text-decoration: none;
+    border-radius:5px;
+}
+.pagetop p a:hover{
+    background:#131313;
+    border:2px solid #fff;
+    color:#fff;
+} */
+
+.nav-link{
+  /* padding: 0; */
+}
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  background: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  /* font-size: 25px; */
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.navbar-toggler{
+  border-color: black;.
+}
+@media screen and (min-width:768px){
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    .active a{
+      /* border-bottom: 2px solid #343a40; */
+      padding-bottom:4px;
+    }
+}
+.nav-item a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  /* text-decoration: none; */
+}
+.nav-item a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #343a40;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .5s;
+  color:black
+}
+.nav-item a:hover::after {
+  /* transform-origin: left top; */
+  /* transform: scale(1, 1) */
+  /* color: #80bdff */
+}
+
+.nav-item a:hover{
+  /* color: #80bdff!important */
+  /* background: gray */
+
+
+  /* background: #E8E8E8; */
+
+
+  /* opacity: 0.8 */
+}
+
+.navbar-light .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6L 24 24M24 6L6 24'/%3E%3C/svg%3E"); */
+  /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6L 24 24M24 6L6 24'/%3E%3C/svg%3E"); */
+}
+.navbar-toggler-icon {
+  /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52,58,64,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+  width:36px;
+  height:36px;
+}
+
+.navbar-light .navbar-toggler {
+  /* border: none; */
+  /* border-color: red */
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image:none; /* この行で背景画像を無効化 */
+  background-color: black;
+  width: 28px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  transition: ease .5s;
+}
+
+
+
+/* 3本のバーそれぞれの座標を設定 */
+.navbar-toggler-icon:nth-of-type(1) {top:5px;}
+.navbar-toggler-icon:nth-of-type(2) {top:16px;}
+.navbar-toggler-icon:nth-of-type(3) {top:27px;}
+
+/* メニューが開いている時の　3本のバーそれぞれの座標および角度を設定 */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(1) {
+top:16px;
+transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(2) {
+opacity: 0;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(3) {
+top:16px;
+transform: rotate(-45deg);
+}
+
+.navbar-brand{
+  /* font-size: 1.3rem; */
+  font-weight: bold;
+}
+
+.nav-item{
+  margin-right:0.5rem;
+  height:100%;
+  opacity:0.7;
+  transition: 0.3s ease-out;
+}
+
+.nav-item:hover{
+  opacity: 1.0;
+}
+
+.active{
+  opacity: 1.0;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #03a9f4;
+    /* border-color: #5f7d8c; */
+    width:36px;
+    height:36px
+}
+
+.album{
+  /* background: url(../img/background.gif) repeat; */
+  /* background: #fff */
+  background: rgb(239, 239, 239);
+
+  /* width:90%; */
+}
+
+
+.jumbotron{
+  /* height:100px; */
+  background-color: --gray-dark;
+  color:white;
+  padding: 2rem 1rem;
+}
+.mocard {
+	display: block;
+	transition: 0.5s;
+}
+.mocard:hover {
+	/* transform: scale(1.05, 1.05); */
+  box-shadow: 0 1.9rem 2.4rem rgba(0,0,0,.15)!important;
+}
+
+.card-title{
+  font-weight: bold;
+}
+.card-text{
+  /* width:100%; */
+  padding:0 1em;
+  background: linear-gradient(#ccc 1px, transparent 1px) white;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
+  /* border-right: 1px solid #ccc; */
+  overflow: hidden;
+}
+
+.card-body{
+  /* background:#fffbf2 */
+  /* background: black; */
+}
+
+
+
+.work-gif{
+  /* border: 2px solid gray */
+}
+
+
+#footer-nav1{
+  /* background-color: --gray-dark */
+}
+#footer-nav1 dt{
+  color:#fff;
+  font-weight: normal;
+}
+#footer-nav1 dd{
+  color:#fff;
+  font-weight: normal;
+}
+
+.copyright-block{
+	/* background: black;
+	padding: 10px;
+	color:#fff;
+	text-align: center; */
+}
+.copyright-block a{
+	color:#fff;
+}
+#copyright{
+  margin: 0 auto
+}
+
+.workTitle{
+  font-weight: bold;
+  border-left: 5px solid #03a9f4;
+}
+
+main{
+  background-color: black;
+}
+
+.card-text{
+  /* width:100%; */
+  padding:0 1em;
+  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
+  /* border-right: 1px solid #ccc; */
+  overflow: hidden;
+}
+
+#modalDescription{
+  /* width:100%; */
+  padding:0 0.5em;
+  background: linear-gradient(#ccc 1px, transparent 1px) white;
+  background-size: auto 2.5em;
+  line-height: 2.5em;
+  border-bottom: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
+  /* border-right: 1px solid #ccc; */
+  overflow: hidden;
+}
+
+.card-text{
+  /* font-size: 0.9rem */
+}
+
+@media screen and (max-width: 767px) {
+  .active a{
+    padding-bottom:1px;
+
+  }
+
+  .nav-item{
+    margin-bottom: 15px;
+  }
+  #navbarText{
+    margin-top: 25px;
+
+    width:35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  /* #p5backGround{
+    height: 100px;
+  } */
+
+  .card-text{
+    /* font-size: 0.7rem */
+  }
+
+  .slideIn{
+    display: none;
+  }
+
+
+  /* ブラウザがEdgeかIEの場合アニメーションが動かない?ので */
+
+  /* Edge */
+  _:-ms-lang(x)::backdrop, .slideIn {
+    display: block;
+  }
+
+  /* IE11 */
+  _:-ms-lang(x)::-ms-backdrop, .slideIn {
+    display: block;
+  }
+
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+}
