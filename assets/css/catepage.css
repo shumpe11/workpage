@@ -2,7 +2,7 @@
 
 html{
   /* height:100% */
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body{
@@ -19,6 +19,12 @@ body{
   color:#0288d1 !important
 }
 
+img{
+    background-image: url("../img/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 header{
   /* border-bottom: 1px solid #000; */
   /* background-color: #5f7d8c; */
@@ -29,6 +35,9 @@ header{
   /* box-shadow: 0 .55rem 1.05rem rgba(0,0,0,.15)!important; */
 }
 
+.btn-primary{
+  /* background-color:  #03a9f4!important */
+}
 
 footer{
   /* width: 90%; */
