@@ -72,13 +72,12 @@
 
 
 <main role="main">
+  <div id="loader-bg">
+    <img src="assets/img/loading.gif">
+  </div>
   <!-- Modal -->
   <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div id="loader">
-      <img src="assets/img/loading.gif" width="48" height="48" alt="">
-    </div>
-    <div id="fade"></div>
-    <div id="container" class="modal-dialog modal-dialog-centered" data-keyboard="true" role="document">
+    <div class="modal-dialog modal-dialog-centered" data-keyboard="true" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">作品詳細</h5>
@@ -107,7 +106,6 @@
           <!-- tab pc -->
           <!-- <div class="row"> -->
           <h5 class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
-
             <div id="demo" class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
               <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
             </div>
