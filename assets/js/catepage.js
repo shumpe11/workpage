@@ -22,7 +22,19 @@ let pathObj = {
   rain:'0332/01/index',
   clock:'0398/02/index',
   firework:'0379/02/index',
-  snow:'0515/01/index'
+  snow:'0515/01/index',
+
+  // anime3d
+  solarsystem:'0111/01/index',
+  explosion:'0468/02/explosion',
+  wave:'0468/03/rainbowCube'
+}
+
+window.onload = function() {
+  const spinner = document.getElementById('loading');
+
+  // Add .loaded to .loading
+  spinner.classList.add('loaded');
 }
 
 
@@ -111,6 +123,9 @@ $.get("a", function(data, status) {
 });
 console.log($(".workTitle"));
 
+
+
+
 $('.workWrapper').on('click', function() {
   let currentWorkId = $(this).attr('id').replace(/\s/g,'');
   let modalTitle = $("#"+currentWorkId).find('.card-title')[0].textContent;
@@ -122,8 +137,8 @@ $('.workWrapper').on('click', function() {
     console.log("aa")
     $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
   }
-  $("#modalGif").attr('width','800');
-  $("#modalGif").attr('height','800');
+  // $("#modalGif").attr('width','800');
+  // $("#modalGif").attr('height','800');
   $(".workTitle")[0].textContent = modalTitle;
   $(".workTitle")[1].textContent = modalTitle;
   $("#modalDescription")[0].textContent = modalText;
