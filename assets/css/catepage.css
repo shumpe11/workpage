@@ -9,6 +9,8 @@ body{
   font-family:Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
 }
 
+
+
 .card-title{
   border-left: 5px solid #03a9f4
 }
@@ -351,7 +353,7 @@ main{
 @media screen and (max-width: 767px) {
 
   html{
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .active a{
@@ -403,5 +405,5 @@ main{
 }
 
 #modalDescription{
-  font-size: 11px;
+  /* font-size: 11px; */
 }
