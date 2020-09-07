@@ -27,8 +27,8 @@ img{
 
 header{
   /* border-bottom: 1px solid #000; */
-  background-color: #5f7d8c;
-  /* background-color: #fff; */
+  /* background-color: #5f7d8c; */
+  background-color: #fff;
   color:#e1e1e1;
   /* color:#fff; */
   /* height:64px; */
@@ -41,6 +41,30 @@ header{
 
 footer{
   /* width: 90%; */
+}
+
+#loader {
+	width: 48px;
+	height: 48px;
+	display: none;
+	position: fixed;
+	_position: absolute; /* IE6対策 */
+	top: 50%;
+	left: 50%;
+	margin-top: -24px; /* loading.gifの高さの半分(マイナス値) */
+	margin-left: -24px; /* loading.gifの横幅の半分(マイナス値) */
+	z-index: 10; /* #fadeよりも前に表示する */
+}
+
+#fade {
+	width: 100%;
+	haight: 100%;
+	display: none;
+	background: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5; /* #loaderよりも後ろに表示する */
 }
 
 body::-webkit-scrollbar{
