@@ -1,0 +1,366 @@
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>未定</title>
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/plugin/animate.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- <meta name="theme-color" content="#563d7c"> -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/catepage.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="shadow p-1">
+
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand text-dark" href="#">
+            <!-- ここにブランド入れられる -->
+            ギャラリー
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="game2.html"><i class="fa fa-gamepad fa-lg fa-fw"></i>ゲーム<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="animation2d.html"><i class="far fa-square fa-lg fa-fw"></i>アニメーション(2D)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="categoryC.html"><i class="fas fa-cubes fa-lg fa-fw"></i>アニメーション(3D)</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+<main role="main">
+  <!-- Modal -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" data-keyboard="true" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">作品詳細</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="">
+            <span aria-hidden="true" aria-label="閉じる">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- smartphone -->
+            <!-- <div class="col-sm-12">
+              <h5 id="modalTitle">作品名</h2>
+              <p id="modalDescription">ここにコメントここにコメントここにコメントここにコメントここにコメントここにコメント(42文字)</p>
+              <p　class="caution">＊詳しく見るを押すと新しいタブで個別の作品ページが開かれます</p>
+              <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif">
+              <ul class="nav">
+                <div class="col-6">
+                  <li><a href="#" class="btn btn-link" data-dismiss="modal">とじる</a></li>
+                </div>
+                <div class="col-6">
+                  <li><a href="#" id="show-detail" class="btn btn-primary">詳しく見る</a></li>
+                </div>
+              </ul>
+            </div> -->
+
+          <!-- tab pc -->
+          <!-- <div class="row"> -->
+          <h5 class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h2>
+            <div class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
+              <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-12">
+              <h5 class="workTitle d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h2>
+              <p id="modalDescription" class="col-md-12 col-sm-12"></p>
+              <!-- <p　class="caution">＊詳しく見るを押すと新しいタブで個別の作品ページが開かれます</p> -->
+              <ul class="nav">
+                <li><a href="#" class="btn btn-link btn-sm mr-5" data-dismiss="modal">とじる</a></li>
+                <li><a href="#" id="show-detail" class="btn btn-primary btn-sm">くわしく見る</a></li>
+              </ul>
+            </div>
+          <!-- </div> -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- album -->
+  <div class="album py-5">
+    <div class="container" id="workContainer">
+      <div class="row">
+
+        <div id="dodge" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/dodge.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top  slideIn">
+              <p class="card-title gray-dark pl-2">Dodge</p>
+              <p class="card-text bg-white">降ってくるボールをクリックで避けるゲーム。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.U</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fish" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/fish.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top  slideIn">
+              <p class="card-title gray-dark pl-2"></p>
+              <p class="card-text bg-white">上下に迫ってくる障害物をクリックで避けるゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.N</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="yandere" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/yandere.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top  slideIn">
+              <p class="card-title gray-dark pl-2">避けろ！！！</p>
+              <p class="card-text bg-white">ヤンデレ女が投げる包丁を避けるゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">がきや</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="kingyo" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/kingyo.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">金魚すくい</p>
+              <p class="card-text bg-white">祭り気分を味わってもらうために作りました。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">くま</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="robot" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/robot.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">お掃除ロボ</p>
+              <p class="card-text bg-white">ル〇バのようなお掃除ロボットを使ったゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">くま</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="pingpong" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/pingpong.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">PinPon</p>
+              <p class="card-text bg-white">5点先取制の簡単な卓球ゲームを作りました。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">R.H</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="clione" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/clione.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">クリオネ</p>
+              <p class="card-text bg-white">キーをタイプするとカーソルのある所に図形が表示されます。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">ふっさん</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="english" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/english.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">ENJOY ENGLISH</p>
+              <p class="card-text bg-white">幼児向けの簡単な英語学習ができるようなコンテンツです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">K.W</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="quiz" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/quiz.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2"></p>
+              <p class="card-text bg-white">これが何なのかあなたに分かりますか？Xからの挑戦状‼</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">N.N</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="marubatsu" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/marubatsu.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2"></p>
+              <p class="card-text bg-white">マスの数を増やしたマルバツゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.Y</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="oekakiblock" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img id="img" src="assets/img/oekakiblock.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2"></p>
+              <p class="card-text bg-white">マスの数を増やしたマルバツゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.Y</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="shadow bg-white p-3">
+		<div class="copyright-block">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="text-dark">
+						Copyright &copy; . All Rights Reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+  </footer>
+
+<script src="assets/js/lib/jquery-3.5.1.min.js"></script>
+<script src="assets/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/catepage.js">
+
+</script>
+  </body>
+</html>
