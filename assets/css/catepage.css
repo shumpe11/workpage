@@ -352,9 +352,7 @@ main{
 
 @media screen and (max-width: 767px) {
 
-  html{
-    font-size: 14px;
-  }
+
 
   .active a{
     padding-bottom:1px;
