@@ -118,10 +118,7 @@ $.get("a", function(data, status) {
 });
 console.log($(".workTitle"));
 
-function test(){
-  // console.log("a")
-  $("#loading").remove();
-}
+
 
 
 
@@ -130,12 +127,13 @@ $('.workWrapper').on('click', function() {
   let modalTitle = $("#"+currentWorkId).find('.card-title')[0].textContent;
   let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
   let currentPath = pathObj[currentWorkId];
-  try {
+
     $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
-  } catch (e) {
-    console.log("aa")
-    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
-  }
+    $("#modalGif").on('load', function(){$("#loading").remove(); });
+
+    // console.log("aa")
+    // $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
+
   // $("#modalGif").attr('width','800');
   // $("#modalGif").attr('height','800');
   $(".workTitle")[0].textContent = modalTitle;
