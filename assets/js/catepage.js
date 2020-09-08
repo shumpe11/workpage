@@ -118,6 +118,10 @@ $.get("a", function(data, status) {
 });
 console.log($(".workTitle"));
 
+function test(){
+  // console.log("a")
+  $("#loading").remove();
+}
 
 
 
@@ -127,7 +131,6 @@ $('.workWrapper').on('click', function() {
   let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
   let currentPath = pathObj[currentWorkId];
   try {
-    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
     $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
   } catch (e) {
     console.log("aa")
