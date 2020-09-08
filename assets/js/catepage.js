@@ -79,9 +79,6 @@ let pathObj = {
 //
 
 
-window.addEventListener('popstate', function(e) {
-console.log('ブラウザバックを検知しました。');
-});
 
 
 // ウィンドウサイズが768px以上のとき
@@ -118,11 +115,6 @@ if (matchMedia('(min-width: 768px)').matches) {
 $('.navbar-toggler').on('click', function() {
   $('.nav-link').addClass("animate__animated animate__fadeInUp");
 });
-
-$.get("a", function(data, status) {
-   console.log("File request status: ");
-});
-console.log($(".workTitle"));
 
 $(function() {
   var h = $(window).height();
@@ -172,7 +164,3 @@ $('.workWrapper').on('click', function() {
 
   $("#show-detail").attr('href','work/' + currentPath + '.html');
 });
-
-window.onerror = function(e){
-  console.log(e);
-}
