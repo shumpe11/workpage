@@ -30,13 +30,7 @@ let pathObj = {
   wave:'0468/03/rainbowCube'
 }
 
-$('head').append(
-	'<style type="text/css">#container { display: none; } #fade, #loader { display: block; }</style>'
-);
 
-jQuery("#modalGif").on('load', function() {
-  jQuery('#loader-bg').hide();
-});
 
 
 
@@ -133,6 +127,7 @@ $('.workWrapper').on('click', function() {
   let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
   let currentPath = pathObj[currentWorkId];
   try {
+    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
     $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
   } catch (e) {
     console.log("aa")
