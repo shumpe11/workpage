@@ -15,6 +15,7 @@ let pathObj = {
   english:'0515/02/index',
   quiz:'0009/02/index',
   fish:'0332/02/index',
+  piano:'0009/01/index',
 
   // anime2d
   countdown:'0111/02/index',
@@ -27,7 +28,12 @@ let pathObj = {
   // anime3d
   solarsystem:'0111/01/index',
   explosion:'0468/02/explosion',
-  wave:'0468/03/rainbowCube'
+  wave:'0468/03/rainbowCube',
+
+  // drawing
+  makeart:'0067/01/index',
+  drawart:'0138/02/index',
+  drawing:'0480/資料/まとめサイト/01/index(お絵描き)'
 }
 
 
@@ -151,6 +157,7 @@ $('.workWrapper').on('click', function() {
   let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
   let currentPath = pathObj[currentWorkId];
 
+    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
     $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
     $("#modalGif").on('load', function(){$("#loading").remove(); });
 
