@@ -188,7 +188,7 @@ transform: rotate(-45deg);
 }
 
 .navbar-brand{
-  /* font-size: 1.3rem; */
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -299,7 +299,8 @@ main{
   }
 
   .nav-item{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    /* margin-left: 0 auto; */
   }
   #navbarText{
     margin-top: 25px;
