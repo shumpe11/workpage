@@ -149,9 +149,7 @@ $('.workWrapper').on('click', function() {
   let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
   let currentPath = pathObj[currentWorkId];
 
-    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
-    $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
-    $("#modalGif").on('load', function(){$("#loading").remove(); });
+  $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
 
     // console.log("aa")
     // $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
