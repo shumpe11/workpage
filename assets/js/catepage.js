@@ -24,6 +24,7 @@ let pathObj = {
   clock:'0398/02/index',
   firework:'0379/02/index',
   snow:'0515/01/index',
+  moya:'0475/01/index',
 
   // anime3d
   solarsystem:'0111/01/index',
@@ -36,52 +37,7 @@ let pathObj = {
   drawing:'0480/資料/まとめサイト/01/index(お絵描き)'
 }
 
-
-
-
-
-
-// jQuery(function() {
-//   let appear = false;
-//   let pagetop = $('#page_top');
-//   $(window).scroll(function () {
-//     if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
-//       if (appear == false) {
-//         appear = true;
-//         pagetop.stop().animate({
-//           'bottom': '50px' //下から50pxの位置に
-//         }, 300); //0.3秒かけて現れる
-//       }
-//     } else {
-//       if (appear) {
-//         appear = false;
-//         pagetop.stop().animate({
-//           'bottom': '-50px' //下から-50pxの位置に
-//         }, 300); //0.3秒かけて隠れる
-//       }
-//     }
-//   });
-//   pagetop.click(function () {
-//     $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
-//     return false;
-//   });
-// });
-//
-// $(function(){
-//         var amount = 200; //スクロール量（px）
-//         $('#pagetop').hide();
-//
-//         $(window).scroll(function(){
-//             var scrollPoint = $(this).scrollTop();
-//             (scrollPoint > amount)?$('#pagetop').fadeIn():(scrollPoint < amount)?$('#pagetop').fadeOut():$('#pagetop').show();
-//         });
-//     });
-//
-
-
-
-
-// ウィンドウサイズが768px以上のとき
+// ウィンドウサイズが768px以上のときアニメーション適用
 if (matchMedia('(min-width: 768px)').matches) {
 
   // モーダルウィンドウ調整
@@ -100,7 +56,6 @@ if (matchMedia('(min-width: 768px)').matches) {
     setTimeout(function(){
       $('.slideIn').slideToggle();
       $('.moimg').removeClass('border-bottom');
-      // $('header').addClass('shadow');
       $('header').addClass('sticky-top');
     },2000)
 
@@ -116,32 +71,11 @@ $('.navbar-toggler').on('click', function() {
   $('.nav-link').addClass("animate__animated animate__fadeInUp");
 });
 
-$(function() {
-  var h = $(window).height();
-
-  $('#wrap').css('display','none');
-  $('#loader-bg ,#loader').height(h).css('display','block');
-});
-
-$(window).on('load', function () { //全ての読み込みが完了したら実行
-  $('#loader-bg').delay(900).fadeOut(800);
-  $('#loader').delay(600).fadeOut(300);
-  $('#wrap').css('display', 'block');
-});
-
-//10秒たったら強制的にロード画面を非表示
-$(function(){
-  setTimeout('stopload()',10000);
-});
-
 function stopload(){
   $('#wrap').css('display','block');
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').delay(600).fadeOut(300);
 }
-
-
-
 
 $('.workWrapper').on('click', function() {
   let currentWorkId = $(this).attr('id').replace(/\s/g,'');
@@ -150,12 +84,6 @@ $('.workWrapper').on('click', function() {
   let currentPath = pathObj[currentWorkId];
 
   $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
-
-    // console.log("aa")
-    // $("#modalGif").attr('src','assets/img/' + currentWorkId + '.PNG');
-
-  // $("#modalGif").attr('width','800');
-  // $("#modalGif").attr('height','800');
   $(".workTitle")[0].textContent = modalTitle;
   $(".workTitle")[1].textContent = modalTitle;
   $("#modalDescription")[0].textContent = modalText;
