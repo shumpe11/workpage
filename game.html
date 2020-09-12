@@ -53,7 +53,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
+                <a class="nav-link" href="home.html"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="animation.html"><i class="far fa-square fa-lg fa-fw"></i>アニメーション</a>
@@ -83,40 +83,19 @@
           </button>
         </div>
         <div class="modal-body">
-
-            <!-- smartphone -->
-            <!-- <div class="col-sm-12">
-              <h5 id="modalTitle">作品名</h2>
-              <p id="modalDescription">ここにコメントここにコメントここにコメントここにコメントここにコメントここにコメント(42文字)</p>
-              <p　class="caution">＊詳しく見るを押すと新しいタブで個別の作品ページが開かれます</p>
-              <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif">
-              <ul class="nav">
-                <div class="col-6">
-                  <li><a href="#" class="btn btn-link" data-dismiss="modal">とじる</a></li>
-                </div>
-                <div class="col-6">
-                  <li><a href="#" id="show-detail" class="btn btn-primary">詳しく見る</a></li>
-                </div>
-              </ul>
-            </div> -->
-
-          <!-- tab pc -->
-          <!-- <div class="row"> -->
-          <h5 class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h2>
-            <div class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
-              <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
-            </div>
-            <div class="col-lg-7 col-md-12 col-sm-12">
-              <h5 class="workTitle d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h2>
-              <p id="modalDescription" class="col-md-12 col-sm-12"></p>
-              <!-- <p　class="caution">＊詳しく見るを押すと新しいタブで個別の作品ページが開かれます</p> -->
-              <ul class="nav">
-                <li><a href="#" class="btn btn-link btn-sm mr-5" data-dismiss="modal">とじる</a></li>
-                <li><a href="#" id="show-detail" class="btn btn-primary btn-sm">くわしく見る</a></li>
-              </ul>
-            </div>
-          <!-- </div> -->
-        </div>
+          <h5 id="mdsmTitle" class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
+          <div id="wrap" class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
+            <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
+          </div>
+          <div id="descriptionWrap" class="col-lg-7 col-md-12 col-sm-12">
+            <h5 id="lgTitle" class="workTitle d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
+            <p id="modalDescription" class="col-md-12 col-sm-12"></p>
+            <p id="handlename" class="text-right mr-4 text-muted"></p>
+            <ul class="nav">
+              <li><a href="#" class="btn btn-link btn-sm mr-5" data-dismiss="modal">とじる</a></li>
+              <li><a href="#" id="show-detail" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">くわしく見る</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -204,6 +183,45 @@
           </div>
         </div>
 
+        <div id="solarsystemQuiz" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img  src="assets/img/solarsystemQuiz.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">太陽系クイズ</p>
+              <p class="card-text bg-white">太陽系について学べる3Dモデルです。クイズもあるよ</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.Y</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="marubatsu" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg border-bottom ">
+              <img  src="assets/img/marubatsu.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2">マルバツゲーム</p>
+              <p class="card-text bg-white">マスの数を増やしたマルバツゲームです。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.Y</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div id="robot" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
             <div class="moimg border-bottom ">
@@ -280,24 +298,6 @@
           </div>
         </div>
 
-        <div id="marubatsu" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
-          <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/marubatsu.PNG" alt="" width="100%" height="225">
-            </div>
-            <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2"></p>
-              <p class="card-text bg-white">マスの数を増やしたマルバツゲームです。</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
-                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                </div>
-                <small class="text-muted">Y.Y</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div id="piano" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
@@ -331,7 +331,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="copyright" class="text-dark">
-						Copyright &copy; Shumpei Yamaoka All Rights Reserved.
+						<small>Copyright &copy; Shumpei Yamaoka All Rights Reserved.</small>
 					</div>
 				</div>
 			</div>
