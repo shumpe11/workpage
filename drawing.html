@@ -83,16 +83,16 @@
           </button>
         </div>
         <div class="modal-body">
-          <h5 id="mdsmTitle" class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
+          <h5 id="mdsmTitle" class="modal-body-title d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
           <div id="wrap" class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
             <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
           </div>
           <div id="descriptionWrap" class="col-lg-7 col-md-12 col-sm-12">
-            <h5 id="lgTitle" class="workTitle d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
+            <h5 id="lgTitle" class="modal-body-title d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
             <p id="modalDescription" class="col-md-12 col-sm-12"></p>
-            <p id="handlename" class="text-right mr-4"></p>
+            <p id="handlename" class="text-right mr-4 text-muted"></p>
             <ul class="nav">
-              <li><a href="#" class="btn btn-link btn-sm mr-5" data-dismiss="modal">とじる</a></li>
+              <li><a href="#" class="btn btn-link btn-sm mr-4 text-white bg-secondary" data-dismiss="modal">とじる</a></li>
               <li><a href="#" id="show-detail" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">くわしく見る</a></li>
             </ul>
           </div>
@@ -106,77 +106,77 @@
     <div class="container" id="workContainer">
       <div class="row">
 
-        <div id="makeart" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
-          <div class="card mb-4 shadow mocard rounded">
+        <div id="makeart" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
             <div class="moimg border-bottom ">
-              <img id="img" src="assets/img/makeart.PNG" alt="" width="100%" height="225">
+              <img id="img" class="rounded-top" src="assets/img/makeart.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">Rainbow Circle</p>
-              <p class="card-text bg-white">マウスでカラフルな円形のアート作品を作れます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">Rainbow Circle</p>
+              <p class="card-text bg-white pl-4 pr-4">マウスでカラフルな円形のアート作品を作れます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">Y.U</small>
+                <small class="text-muted mr-4">Y.U</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="drawart" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="drawart" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
             <div class="moimg border-bottom ">
-              <img id="img" src="assets/img/drawart.PNG" alt="" width="100%" height="225">
+              <img id="img" class="rounded-top" src="assets/img/drawart.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">適当アートメーカー</p>
-              <p class="card-text bg-white">適当にマウスで描くだけでそれっぽいアートができます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">適当アートメーカー</p>
+              <p class="card-text bg-white pl-4 pr-4">適当にマウスで描くだけでそれっぽいアートができます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">がきや</small>
+                <small class="text-muted mr-4">がきや</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="drawing" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="drawing" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
             <div class="moimg border-bottom ">
-              <img id="img" src="assets/img/drawing.PNG" alt="" width="100%" height="225">
+              <img id="img" class="rounded-top" src="assets/img/drawing.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">お絵描きツール！</p>
-              <p class="card-text bg-white">お絵描きツールがどのように作られているのかを知ってみたかったので、作ってみました円と線を使ったお絵描きが可能で、自由に色も変更できます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">お絵描きツール！</p>
+              <p class="card-text bg-white pl-4 pr-4">お絵描きツールがどのように作られているのかを知ってみたかったので、作ってみました。円と線を使ったお絵描きが可能で、自由に色も変更できます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">Y.N</small>
+                <small class="text-muted mr-4">Y.N</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="clione" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="clione" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
             <div class="moimg border-bottom ">
-              <img id="img" src="assets/img/clione.PNG" alt="" width="100%" height="225">
+              <img id="img" class="rounded-top" src="assets/img/clione.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2">クリオネ</p>
-              <p class="card-text bg-white">キーをタイプするとカーソルのある所に図形が表示されます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">クリオネ</p>
+              <p class="card-text bg-white pl-4 pr-4">キーをタイプするとカーソルのある所に図形が表示されます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">ふっさん</small>
+                <small class="text-muted mr-4">ふっさん</small>
               </div>
             </div>
           </div>

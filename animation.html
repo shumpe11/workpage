@@ -37,7 +37,7 @@
     <link href="assets/css/catepage.css" rel="stylesheet">
   </head>
   <body>
-  <header class="shadow p-1">
+  <header class="shadow-sm p-1">
 
       <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand text-dark" href="#">
@@ -83,16 +83,16 @@
           </button>
         </div>
         <div class="modal-body">
-          <h5 id="mdsmTitle" class="workTitle d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
+          <h5 id="mdsmTitle" class="modal-body-title d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
           <div id="wrap" class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
             <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
           </div>
           <div id="descriptionWrap" class="col-lg-7 col-md-12 col-sm-12">
-            <h5 id="lgTitle" class="workTitle d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
+            <h5 id="lgTitle" class="modal-body-title d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
             <p id="modalDescription" class="col-md-12 col-sm-12"></p>
-            <p id="handlename" class="text-right mr-4"></p>
-            <ul class="nav">
-              <li><a href="#" class="btn btn-link btn-sm mr-5" data-dismiss="modal">とじる</a></li>
+            <p id="handlename" class="text-right mr-4 text-muted"></p>
+            <ul class="nav mb-3 ml-3">
+              <li><a href="#" class="btn btn-link btn-sm mr-4 text-white bg-secondary" data-dismiss="modal">とじる</a></li>
               <li><a href="#" id="show-detail" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">くわしく見る</a></li>
             </ul>
           </div>
@@ -107,185 +107,186 @@
   <div class="album py-5">
     <div class="container" id="workContainer">
       <div class="row">
-        <div id="emoji" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
-          <div class="card mb-4 shadow mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/emoji.PNG" alt="" width="100%" height="225">
+
+        <div id="emoji" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg">
+              <img class="rounded-top" src="assets/img/emoji.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">絵文字の川</p>
-              <p class="card-text bg-white">画面下からさまざまな絵文字がさまざまな大きさでしばらく現れ続けます。顔関係の絵文字がよく出ます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">絵文字の川</p>
+              <p class="card-text bg-white pl-4 pr-4">画面下からさまざまな絵文字がさまざまな大きさでしばらく現れ続けます。顔関係の絵文字がよく出ます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">S.Y</small>
+                <small class="text-muted mr-4">S.Y</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="countdown" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="countdown" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/countdown.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/countdown.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">オリンピックカウントダウン</p>
-              <p class="card-text bg-white">２０２１年に延期された東京オリンピックまでの時間を表示しています。背景のグラフィックは一秒おきに変化しています。</p>
+              <p class="card-title gray-dark pl-2 ml-1">オリンピックカウントダウン</p>
+              <p class="card-text bg-white pl-4 pr-4">２０２１年に延期された東京オリンピックまでの時間を表示しています。背景のグラフィックは一秒おきに変化しています。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted"></small>
+                <small class="text-muted mr-4"></small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="rain" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="rain" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/rain.PNG" alt="" width="100%" height="225">
+            <div class="moimg">
+              <img class="rounded-top" src="assets/img/rain.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2"></p>
-              <p class="card-text bg-white">jsをあまり触ったことがないので、簡単なものから作ってみました。</p>
+              <p class="card-title gray-dark pl-2 ml-1"></p>
+              <p class="card-text bg-white pl-4 pr-4">jsをあまり触ったことがないので、簡単なものから作ってみました。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">Y.N</small>
+                <small class="text-muted mr-4">Y.N</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="clock" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="clock" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/clock.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/clock.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2">Simple Clock</p>
-              <p class="card-text bg-white">黒背景の中にシンプルなアナログ時計を浮かべてみました。</p>
+              <p class="card-title gray-dark pl-2 ml-1">Simple Clock</p>
+              <p class="card-text bg-white pl-4 pr-4">黒背景の中にシンプルなアナログ時計を浮かべてみました。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">R.H</small>
+                <small class="text-muted mr-4">R.H</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="firework" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="firework" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/firework.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/firework.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2">はなび</p>
-              <p class="card-text bg-white">数字キーを入力すると色が変わります。</p>
+              <p class="card-title gray-dark pl-2 ml-1">はなび</p>
+              <p class="card-text bg-white pl-4 pr-4">数字キーを入力すると色が変わります。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">ふっさん</small>
+                <small class="text-muted mr-4">ふっさん</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="snow" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="snow" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/snow.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/snow.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2">雪だるま</p>
-              <p class="card-text bg-white">雪だるまが降ってくる雪を眺めています。</p>
+              <p class="card-title gray-dark pl-2 ml-1">雪だるま</p>
+              <p class="card-text bg-white pl-4 pr-4">雪だるまが降ってくる雪を眺めています。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">K.W</small>
+                <small class="text-muted mr-4">K.W</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="solarsystem" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
-          <div class="card mb-4 shadow mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/solarsystem.PNG" alt="" width="100%" height="225">
+        <div id="solarsystem" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/solarsystem.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">太陽系模型</p>
-              <p class="card-text bg-white">太陽系の模型を作りました。画面をクリックしているときは内惑星の比率が本物と同じになります。（本来は惑星間で差が大きいので比率を変えています。）</p>
+              <p class="card-title gray-dark pl-2 ml-1">太陽系模型</p>
+              <p class="card-text bg-white pl-4 pr-4">太陽系の模型を作りました。画面をクリックしているときは内惑星の比率が本物と同じになります。（本来は惑星間で差が大きいので比率を変えています。）</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted"></small>
+                <small class="text-muted mr-4"></small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="wave" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="wave" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/wave.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/wave.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2">虹色の波</p>
-              <p class="card-text bg-white">時間経過で高さと色を変えることで虹色の波のような動きを表現しました。</p>
+              <p class="card-title gray-dark pl-2 ml-1">虹色の波</p>
+              <p class="card-text bg-white pl-4 pr-4">時間経過で高さと色を変えることで虹色の波のような動きを表現しました。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">S.Y</small>
+                <small class="text-muted mr-4">S.Y</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="explosion" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="explosion" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/explosion.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/explosion.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2">はじけ飛ぶ立方体</p>
-              <p class="card-text bg-white">さまざまな色の立方体がはじけ飛んでいきます。クリックするとまた立方体がはじけ飛びます。</p>
+              <p class="card-title gray-dark pl-2 ml-1">はじけ飛ぶ立方体</p>
+              <p class="card-text bg-white pl-4 pr-4">さまざまな色の立方体がはじけ飛んでいきます。クリックするとまた立方体がはじけ飛びます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted">S.Y</small>
+                <small class="text-muted mr-4">S.Y</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="moya" class="col-md-6 col-lg-4 workWrapper" data-toggle="modal" data-target="#modal">
+        <div id="moya" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg border-bottom ">
-              <img  src="assets/img/moya.PNG" alt="" width="100%" height="225">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/moya.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2"></p>
-              <p class="card-text bg-white"></p>
+              <p class="card-title gray-dark pl-2 ml-1"></p>
+              <p class="card-text bg-white pl-4 pr-4"></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
@@ -304,7 +305,7 @@
   </div>
 </main>
 
-<footer class="shadow bg-white p-3">
+<footer class="shadow-sm bg-white p-3">
 		<div class="copyright-block">
 			<div class="container">
 				<div class="row">
