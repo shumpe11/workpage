@@ -47,7 +47,7 @@ header{
   /* background-color: #5f7d8c; */
   background-color: #03a9f4;
   color:#e1e1e1;
-  -webkit-transform: translateZ(0); 
+  -webkit-transform: translateZ(0);
   /* color:#fff; */
   /* height:64px; */
   /* box-shadow: 0 .55rem 1.05rem rgba(0,0,0,.15)!important; */
@@ -225,26 +225,46 @@ transform: rotate(-45deg);
 }
 .mocard {
 	display: block;
-	transition: 0.5s;
+	transition: 0.23s;
+
 }
 .mocard:hover {
-	/* transform: scale(1.05, 1.05); */
-  box-shadow: 0 1.9rem 2.4rem rgba(0,0,0,.15)!important;
+  box-shadow: 0 1.5rem 2rem rgba(0,0,0,0.20)!important;
+
+}
+
+.moimg{
+  transition: .4s;
+}
+
+
+.mocard:hover + .moimg{
+  transform: scale(1.05, 1.05);
+}
+
+.btn-link:hover{
+  text-decoration: none;
 }
 
 .card-title{
   font-weight: bold;
+  /* font-size: 1.25rem */
+}
+
+.moimg img{
+  /* border-radius: 3px 3px 50px 50px; */
 }
 
 
 .card-text{
   /* width:100%; */
-  padding:0 1em;
-  background: linear-gradient(#ccc 1px, transparent 1px) white;
-  background-size: auto 2.5em;
-  line-height: 2.5em;
-  border-bottom: 1px solid #ccc;
-  overflow: hidden;
+  /* padding:0 1em; */
+  background: linear-gradient(#ddd 1px, transparent 1px) white;
+  background-size: auto 2.4rem;
+  line-height: 2.4rem;
+  border-bottom: 1px solid #ddd;
+  /* border-top: 1px solid #ccc; */
+  /* overflow: hidden; */
 }
 
 .copyright-block a{
@@ -254,34 +274,28 @@ transform: rotate(-45deg);
   margin: 0 auto
 }
 
-.workTitle{
+.modal-body-title{
   font-weight: bold;
   border-left: 5px solid #03a9f4;
 }
+
+
+
+
 
 main{
   background-color: black;
 }
 
-.card-text{
-  /* width:100%; */
-  padding:0 1em;
-  background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-  background-size: auto 2.5em;
-  line-height: 2.5em;
-  border-bottom: 1px solid #ccc;
-  /* border-left: 1px solid #ccc; */
-  /* border-right: 1px solid #ccc; */
-  overflow: hidden;
-}
+
 
 #modalDescription{
   /* width:100%; */
-  padding:0 0.5em;
-  background: linear-gradient(#ccc 1px, transparent 1px) white;
-  background-size: auto 2.5em;
-  line-height: 2.5em;
-  border-bottom: 1px solid #ccc;
+  /* padding:0 0.5em; */
+  background: linear-gradient(#ddd 1px, transparent 1px) white;
+  background-size: auto 2.4rem;
+  line-height: 2.4rem;
+  border-bottom: 1px solid #ddd;
   /* border-left: 1px solid #ccc; */
   /* border-right: 1px solid #ccc; */
   overflow: hidden;
@@ -324,6 +338,23 @@ main{
   /* Edge */
   _:-ms-lang(x)::backdrop, .slideIn {
     display: block;
+  }
+  _:-ms-lang(x)::backdrop, .card-text {
+    border-bottom: none;
+
+  }
+  _:-ms-lang(x)::backdrop, .card-text {
+
+      /* width:100%; */
+      /* padding:0 1em; */
+      background: none;
+      background-size: auto 2.2rem;
+      line-height: 2.2rem;
+      border-bottom: 1px solid #ccc;
+      /* border-top: 1px solid #ccc; */
+      /* overflow: hidden; */
+
+
   }
 
   /* IE11 */

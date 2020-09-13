@@ -1,10 +1,9 @@
-
 "use strict";
 
 let userAgent = window.navigator.userAgent;
 let browserBackEvent = 0;
 let currentWorkId = ''
-let pathObj = {
+const pathObj = {
 // game
 dodge:'0067/02/index',
 yandere:'0138/01/index',
@@ -61,6 +60,7 @@ if(userAgent.indexOf('Edge') == -1) {
   },2000)
 
 } else{
+    // Microsoft Edgeのときデザイン調整
     $('header').addClass('sticky-top');
     $('#lgTitle').removeClass('d-lg-block');
     $('#mdsmTitle').removeClass('d-lg-none');
@@ -68,6 +68,7 @@ if(userAgent.indexOf('Edge') == -1) {
     $('#wrap').addClass('col-lg-12');
     $('#descriptionWrap').removeClass('col-lg-7');
     $('#descriptionWrap').addClass('col-lg-12');
+    $('.card-text').css('border-bottom', '1px solid #fff');
   }
 } else{
   $('header').addClass('sticky-top');
@@ -78,13 +79,10 @@ $('.navbar-toggler').on('click', function() {
 $('.nav-link').addClass("animate__animated animate__fadeInUp");
 });
 
-function stopload(){
-$('#wrap').css('display','block');
-$('#loader-bg').delay(900).fadeOut(800);
-$('#loader').delay(600).fadeOut(300);
-}
 
-$('.workWrapper').on('click', function() {
+
+
+$('.work-wrapper').on('click', function() {
 let currentWorkId = $(this).attr('id').replace(/\s/g,'');
 let modalTitle = $("#"+currentWorkId).find('.card-title')[0].textContent;
 let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
@@ -92,8 +90,8 @@ let currentPath = pathObj[currentWorkId];
 let currentHandlename = $("#"+currentWorkId).find('.text-muted')[0].outerText;
 
 $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
-$(".workTitle")[0].textContent = modalTitle;
-$(".workTitle")[1].textContent = modalTitle;
+$(".modal-body-title")[0].textContent = modalTitle;
+$(".modal-body-title")[1].textContent = modalTitle;
 $("#modalDescription")[0].textContent = modalText;
 $("#handlename")[0].textContent = currentHandlename;
 
