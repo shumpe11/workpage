@@ -49,6 +49,7 @@ if(userAgent.indexOf('Edge') == -1) {
   //読み込み時にcardが落ちてくるアニメーションを付与するクラスを作品全体に設定
   $("#workContainer").addClass("animate__animated animate__slideInDown animate__slow");
 
+
   // モーダルウィンドウサイズ調整
   $('#modal').children('.modal-dialog').addClass("modal-lg")
 
@@ -79,15 +80,48 @@ $('.navbar-toggler').on('click', function() {
 $('.nav-link').addClass("animate__animated animate__fadeInUp");
 });
 
+if(userAgent.indexOf('Edge') == -1) {
+  $('#modal').on('hidden.bs.modal', function () {
+    // do something…
+    // console.log(currentWorkId);
+    $("#" + currentWorkId).removeClass("animate__animated animate__fadeOutUp");
+    $("#" + currentWorkId).addClass("animate__animated animate__slideInDown animate__fast");
+    setTimeout(function(){
+      $("#" + currentWorkId).removeClass("animate__animated animate__slideInDown");
+      $('header').addClass('sticky-top');
+
+    },500)
+
+  })
+}
+
+
 
 
 
 $('.work-wrapper').on('click', function() {
-let currentWorkId = $(this).attr('id').replace(/\s/g,'');
+currentWorkId = $(this).attr('id').replace(/\s/g,'');
 let modalTitle = $("#"+currentWorkId).find('.card-title')[0].textContent;
 let modalText = $("#"+currentWorkId).find('.card-text')[0].textContent;
 let currentPath = pathObj[currentWorkId];
 let currentHandlename = $("#"+currentWorkId).find('.text-muted')[0].outerText;
+
+if(userAgent.indexOf('Edge') == -1) {
+  $('header').removeClass('sticky-top');
+  $("#" + currentWorkId).addClass("animate__animated animate__fadeOutUp animate__fast");
+  
+  $('[data-toggle=modal]').on('click', function (e) {
+    let $target = $($(this).data('target'));
+    $target.data('triggered',true);
+    setTimeout(function() {
+      if ($target.data('triggered')) {
+        $target.modal('show')
+        .data('triggered',false); // prevents multiple clicks from reopening
+      };
+    }, 500); // milliseconds
+    return false;
+  });
+}
 
 $("#modalGif").attr('src','assets/img/' + currentWorkId + '.gif');
 $(".modal-body-title")[0].textContent = modalTitle;
