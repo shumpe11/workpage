@@ -4,10 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>堀ゼミプロジェクト課題ギャラリー | アニメーション</title>
+    <meta name="description" content="関西大学総合情報学部の堀ゼミ17期生が「p5.js」を使って制作したコンテンツを掲載しています。">
+    <meta name="format-detection" content="telephone=no">
+    <title>アニメーション | 堀ゼミプロジェクト課題ギャラリー</title>
 
     <!-- animate.css -->
     <link rel="stylesheet" href="assets/css/plugin/animate.min.css">
@@ -18,7 +17,7 @@
 
 
     <style>
-      /* .bd-placeholder-img {
+      .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -31,25 +30,25 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      } */
+      }
     </style>
     <!-- Custom styles for this template -->
     <link href="assets/css/catepage.css" rel="stylesheet">
   </head>
   <body>
-  <header class="shadow-sm p-1">
+  <header class="shadow p-1">
 
-      <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand text-dark" href="#">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand text-white" href="#">
           <!-- ここにブランド入れられる -->
           プロジェクト課題ギャラリー
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-text" aria-controls="navbar-text" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse" id="navbar-text">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a class="nav-link" href="home.html"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
@@ -60,7 +59,7 @@
             <li class="nav-item">
               <a class="nav-link" href="game.html"><i class="fa fa-gamepad fa-lg fa-fw"></i>ゲーム</a>
             </li>
-            <li class="nav-item">
+            <li id="nav-item-last" class="nav-item">
               <a class="nav-link" href="drawing.html"><i class="fas fa-paint-brush fa-lg fa-fw"></i>お絵描き</a>
             </li>
           </ul>
@@ -83,13 +82,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <h5 id="mdsmTitle" class="modal-body-title d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
+          <h5 id="mdsm-title" class="modal-body-title d-lg-none col-md-12 col-sm-12 pl-2 mb-3 pl-2 ml-3"></h5>
           <div id="wrap" class="col-lg-5 col-md-12 col-sm-12 pr-10 pl-10">
-            <img src="" alt="GIF画像による作品のデモ" id="modalGif" class="img-fluid work-gif mb-3">
+            <img src="" alt="GIF画像による作品のデモ" id="modal-gif" class="img-fluid work-gif mb-3">
           </div>
-          <div id="descriptionWrap" class="col-lg-7 col-md-12 col-sm-12">
-            <h5 id="lgTitle" class="modal-body-title d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
-            <p id="modalDescription" class="col-md-12 col-sm-12"></p>
+          <div id="modal-body-description-wrap" class="col-lg-7 col-md-12 col-sm-12">
+            <h5 id="lg-title" class="modal-body-title d-lg-block d-sm-none d-md-none d-none d-sm-block pl-2"></h5>
+            <p id="modal-body-description" class="col-md-12 col-sm-12"></p>
             <p id="handlename" class="text-right mr-4 text-muted"></p>
             <ul class="nav mb-3">
               <li><a href="#" class="btn btn-link btn-sm mr-5 text-white bg-secondary" data-dismiss="modal">とじる</a></li>
@@ -105,11 +104,11 @@
 
   <!-- album -->
   <div class="album py-5">
-    <div class="container" id="workContainer">
+    <div class="container">
       <div class="row">
         <div id="firework" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
           <div class="card mb-4 shadow-sm mocard rounded">
-            <div class="moimg  ">
+            <div class="moimg ">
               <img class="rounded-top" src="assets/img/firework.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
@@ -140,7 +139,7 @@
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted mr-4"></small>
+                <small class="text-muted mr-4">K.O</small>
               </div>
             </div>
           </div>
@@ -171,7 +170,7 @@
               <img class="rounded-top" src="assets/img/rain.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top  slideIn">
-              <p class="card-title gray-dark pl-2 ml-1"></p>
+              <p class="card-title gray-dark pl-2 ml-1">あめ</p>
               <p class="card-text bg-white pl-4 pr-4">jsをあまり触ったことがないので、簡単なものから作ってみました。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -236,7 +235,7 @@
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted mr-4"></small>
+                <small class="text-muted mr-4">K.O</small>
               </div>
             </div>
           </div>
@@ -286,14 +285,33 @@
               <img class="rounded-top" src="assets/img/moya.PNG" alt="" width="100%" height="225">
             </div>
             <div class="card-body border-top slideIn">
-              <p class="card-title gray-dark pl-2 ml-1"></p>
-              <p class="card-text bg-white pl-4 pr-4"></p>
+              <p class="card-title gray-dark pl-2 ml-1">伸びる枝</p>
+              <p class="card-text bg-white pl-4 pr-4">時間の経過とともに枝が伸びていきます。</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
-                <small class="text-muted"></small>
+                <small class="text-muted">Y.Y</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fall" class="col-md-6 col-lg-4 work-wrapper" data-toggle="modal" data-target="#modal">
+          <div class="card mb-4 shadow-sm mocard rounded">
+            <div class="moimg  ">
+              <img class="rounded-top" src="assets/img/fall.PNG" alt="" width="100%" height="225">
+            </div>
+            <div class="card-body border-top slideIn">
+              <p class="card-title gray-dark pl-2 ml-1">バウンドする球</p>
+              <p class="card-text bg-white pl-4 pr-4">大小それぞれの球が落ちます。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">Y.Y</small>
               </div>
             </div>
           </div>

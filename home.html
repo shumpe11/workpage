@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja" >
   <head>
-    <title>Projects home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="関西大学総合情報学部の堀ゼミ17期生が「p5.js」を使って制作したコンテンツを掲載しています。">
+    <meta name="format-detection" content="telephone=no">
+    <title>ホーム | 堀ゼミプロジェクト課題ギャラリー</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="album.css" rel="stylesheet">
     <link href="assets/css/home.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
   </head>
 
   <style>
@@ -16,37 +21,38 @@
   </style>
 
   <body>
-    <header class="shadow p-1">
+    <header class="p-1">
 
-        <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand text-dark" href="#">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <a class="navbar-brand text-white" href="#">
             <!-- ここにブランド入れられる -->
             プロジェクト課題ギャラリー
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-text" aria-controls="navbar-text" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
+          <div class="collapse navbar-collapse" id="navbar-text">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
+              <li class="nav-item active">
+                <a class="nav-link align-middle" href="home.html"><i class="fa fa-home fa-lg fa-fw"></i>ホーム</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="animation.html"><i class="far fa-square fa-lg fa-fw"></i>アニメーション</a>
+                <a class="nav-link" href="animation.html"><i class="far fa-square fa-lg fa-fw"></i>アニメーション<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="game.html"><i class="fa fa-gamepad fa-lg fa-fw"></i>ゲーム</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="drawing.html"><i class="fas fa-paint-brush fa-lg fa-fw"></i>お絵描き<span class="sr-only">(current)</span></a>
+              <li id="nav-item-last" class="nav-item">
+                <a class="nav-link" href="drawing.html"><i class="fas fa-paint-brush fa-lg fa-fw"></i>お絵描き</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+
 
      <main role="main">
       <div class="container">
@@ -55,26 +61,27 @@
 
             <div class="card border-white mb-3 text-black col-sm-6">
                     <div class="card-body">
-                        <h1 class="card-title">Project Home</h1>
-                        <p class="card-text mt-5">プロジェクトアルバムのホームです。以下のカテゴリーボタンをクリックすることで作品を見ることができます。
-                        (images,Summary,...)</p>
+                        <h1 class="card-title">プロジェクト課題<br>作品ギャラリー</h1>
+                        <p class="card-text mt-4">以下のカテゴリーボタンをクリックすることでカテゴリーごとに作品を見ることができます。</p>
                     </div>
             </div>
 
 
             <div class="card border-white mb-3 text-white col-sm-6">
                 <img class="card-img" src="assets/img/snow.PNG" alt="Card image">
+                  <a href="animation.html">
                     <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">アニメーション</h5>
+                        <p class="card-text"></p>
                     </div>
+                  </a>
             </div>
 
 
             <div class="card border-white mb-3 text-white col-sm-6">
                 <img class="card-img" src="assets/img/pingpong.PNG" alt="Card image">
                     <div class="delay card-img-overlay">
-                        <h5 class="delay1 card-title">Card title</h5>
+                        <h5 class="delay1 card-title">ゲーム</h5>
                         <p class="delay2 card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
             </div>
@@ -83,21 +90,11 @@
             <div class="card border-white mb-3 text-white col-sm-6">
                 <img class="card-img" src="assets/img/makeart.PNG" alt="Card image">
                     <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">お絵描き</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
             </div>
 
-
-
-
-            <div class="card border-white mb-3 text-white col-sm-6">
-                <img class="card-img" src="works/0111/image/03.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-            </div>
 
 
 
