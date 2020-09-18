@@ -1,24 +1,58 @@
+html{
+  font-size: 15px;
+}
+
+a{
+  color: white
+}
+
 header{
   /* border-bottom: 1px solid #000; */
   /* background-color: #5f7d8c; */
-  background-color: #03a9f4;
-  color:#e1e1e1;
+  background-color: #2196F3;
+  color:#fff
+  -webkit-transform: translateZ(0);
   /* color:#fff; */
-  /* height:64px; */
+  /* height:94px; */
   /* box-shadow: 0 .55rem 1.05rem rgba(0,0,0,.15)!important; */
 }
 
-@media screen and (min-width:768px){
-    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
-    .active a{
-      /* border-bottom: 2px solid #343a40; */
-      padding-bottom:4px;
+@media screen and (max-width:768px){
+
+    html{
+      font-size: 14px;
+    }
+
+    #navbar-text ul li{
+      padding-bottom: 0.75rem
     }
 }
+
+@media screen and (min-width: 768px) {
+
+  .slideIn{
+    display: none;
+  }
+  header{
+    /* height:70px; */
+  }
+  #navbar-text ul li{
+    margin-right: 1.25rem;
+  }
+
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  html{
+    font-size: 14px;
+  }
+}
+
 .nav-item a {
   position: relative;
   display: inline-block;
-  padding-bottom: 4px;
+  font-size: 16px
+  /* padding-bottom: 4px; */
   /* text-decoration: none; */
 }
 .nav-item a::after {
@@ -32,7 +66,7 @@ header{
   transform: scale(0, 1);
   transform-origin: right top;
   transition: transform .5s;
-  color:black
+  color:white
 }
 
 .navbar-toggler-icon {
@@ -40,16 +74,17 @@ header{
   height:36px;
 }
 
-.navbar-light .navbar-toggler {
+.navbar-dark .navbar-toggler {
   padding: 3px;
   width: 30px;
   height: 30px;
   box-sizing: border-box;
   position: relative;
 }
-.navbar-light .navbar-toggler-icon {
+
+.navbar-dark .navbar-toggler-icon {
   background-image:none; /* この行で背景画像を無効化 */
-  background-color: black;
+  background-color: white;
   width: 28px;
   height: 3px;
   display: block;
@@ -60,9 +95,9 @@ header{
 
 
 /* 3本のバーそれぞれの座標を設定 */
-.navbar-toggler-icon:nth-of-type(1) {top:5px;}
+.navbar-toggler-icon:nth-of-type(1) {top:7px;}
 .navbar-toggler-icon:nth-of-type(2) {top:16px;}
-.navbar-toggler-icon:nth-of-type(3) {top:27px;}
+.navbar-toggler-icon:nth-of-type(3) {top:25px;}
 
 /* メニューが開いている時の　3本のバーそれぞれの座標および角度を設定 */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(1) {
@@ -78,16 +113,11 @@ transform: rotate(-45deg);
 }
 
 .navbar-brand{
-  font-size: 16px;
-  font-weight: bold;
+  /* font-size: 16px; */
+  /* font-weight: bold; */
 }
 
-.nav-item{
-  margin-right:0.5rem;
-  height:100%;
-  opacity:0.7;
-  transition: 0.3s ease-out;
-}
+
 
 .nav-item:hover{
   opacity: 1.0;
@@ -97,9 +127,86 @@ transform: rotate(-45deg);
   opacity: 1.0;
 }
 
-.navbar-light .navbar-toggler {
-    border-color: #03a9f4;
+.navbar-dark .navbar-toggler {
+    border-color: #2196f3;
     /* border-color: #5f7d8c; */
     width:36px;
     height:36px
+}
+
+@media screen and (max-width: 767px) {
+
+
+
+  .active a{
+    /* padding-bottom:1px;s */
+
+  }
+  #navbar-text{
+    margin-top: 1.25rem;
+    background-color: #2196F3;
+    width:35px;
+  }
+  #navbar-text ul li{
+    /* margin-bottom: 25px; */
+    /* height: 60px; */
+    box-sizing: border-box;
+    /* border-bottom: 3px solid white */
+    /* margin-left: 0 auto; */
+  }
+
+}
+
+/* タブレット,PC */
+@media screen and (min-width: 768px) {
+
+  .slideIn{
+    display: none;
+  }
+  header{
+    /* height:70px; */
+  }
+  #navbar-text ul li{
+    margin-right: 1.25rem;
+  }
+
+}
+
+/* タブレット限定 */
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  html{
+    font-size: 14px;
+  }
+}
+
+
+  /* ブラウザがEdgeかIEの場合アニメーションが動かないので */
+
+  /* Edge */
+  _:-ms-lang(x)::backdrop, .slideIn {
+    display: block;
+  }
+  _:-ms-lang(x)::backdrop, .card-text {
+    border-bottom: none;
+
+  }
+  _:-ms-lang(x)::backdrop, .card-text {
+
+      /* width:100%; */
+      /* padding:0 1em; */
+      background: none;
+      background-size: auto 2.2rem;
+      line-height: 2.2rem;
+      border-bottom: 1px solid #ccc;
+      /* border-top: 1px solid #ccc; */
+      /* overflow: hidden; */
+
+
+  }
+
+  /* IE11 */
+  _:-ms-lang(x)::-ms-backdrop, .slideIn {
+    display: block;
+  }
+
 }
